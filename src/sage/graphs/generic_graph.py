@@ -8,95 +8,95 @@ can be applied on both. Here is what it can do:
 **Basic Graph operations:**
 
 .. csv-table::
-    :class: contentstable
-    :widths: 30, 70
-    :delim: |
+   :class: contentstable
+   :widths: 30, 70
+   :delim: |
 
-    :meth:`~GenericGraph.networkx_graph` | Return a new ``NetworkX`` graph from the Sage graph
-    :meth:`~GenericGraph.igraph_graph` | Return an ``igraph`` graph from the Sage graph
-    :meth:`~GenericGraph.to_dictionary` | Create a dictionary encoding the graph.
-    :meth:`~GenericGraph.copy` | Return a copy of the graph.
-    :meth:`~GenericGraph.export_to_file` | Export the graph to a file.
-    :meth:`~GenericGraph.adjacency_matrix` | Return the adjacency matrix of the (di)graph.
-    :meth:`~GenericGraph.incidence_matrix` | Return an incidence matrix of the (di)graph
-    :meth:`~GenericGraph.distance_matrix` | Return the distance matrix of the (strongly) connected (di)graph
-    :meth:`~GenericGraph.weighted_adjacency_matrix` | Return the weighted adjacency matrix of the graph
-    :meth:`~GenericGraph.kirchhoff_matrix` | Return the Kirchhoff matrix (a.k.a. the Laplacian) of the graph.
-    :meth:`~GenericGraph.has_loops` | Return whether there are loops in the (di)graph
-    :meth:`~GenericGraph.allows_loops` | Return whether loops are permitted in the (di)graph
-    :meth:`~GenericGraph.allow_loops` | Change whether loops are permitted in the (di)graph
-    :meth:`~GenericGraph.loops` | Return a list of all loops in the (di)graph
-    :meth:`~GenericGraph.loop_edges` | Return a list of all loops in the (di)graph
-    :meth:`~GenericGraph.number_of_loops` | Return the number of edges that are loops
-    :meth:`~GenericGraph.loop_vertices` | Return a list of vertices with loops
-    :meth:`~GenericGraph.remove_loops` | Remove loops on vertices in ``vertices``.
-    :meth:`~GenericGraph.has_multiple_edges` | Return whether there are multiple edges in the (di)graph.
-    :meth:`~GenericGraph.allows_multiple_edges` | Return whether multiple edges are permitted in the (di)graph.
-    :meth:`~GenericGraph.allow_multiple_edges` | Change whether multiple edges are permitted in the (di)graph.
-    :meth:`~GenericGraph.multiple_edges` | Return any multiple edges in the (di)graph.
-    :meth:`~GenericGraph.name` | Return or set the graph's name.
-    :meth:`~GenericGraph.is_immutable` | Return whether the graph is immutable.
-    :meth:`~GenericGraph.weighted` | Whether the (di)graph is to be considered as a weighted (di)graph.
-    :meth:`~GenericGraph.antisymmetric` | Test whether the graph is antisymmetric
-    :meth:`~GenericGraph.density` | Return the density
-    :meth:`~GenericGraph.order` | Return the number of vertices.
-    :meth:`~GenericGraph.size` | Return the number of edges.
-    :meth:`~GenericGraph.add_vertex` | Create an isolated vertex.
-    :meth:`~GenericGraph.add_vertices` | Add vertices to the (di)graph from an iterable container of vertices
-    :meth:`~GenericGraph.delete_vertex` | Delete vertex, removing all incident edges.
-    :meth:`~GenericGraph.delete_vertices` | Delete vertices from the (di)graph taken from an iterable container of vertices.
-    :meth:`~GenericGraph.has_vertex` | Check if ``vertex`` is one of the vertices of this graph.
-    :meth:`~GenericGraph.random_vertex` | Return a random vertex of ``self``.
-    :meth:`~GenericGraph.random_vertex_iterator` | Return an iterator over random vertices of ``self``.
-    :meth:`~GenericGraph.random_edge` | Return a random edge of ``self``.
-    :meth:`~GenericGraph.random_edge_iterator` | Return an iterator over random edges of ``self``.
-    :meth:`~GenericGraph.vertex_boundary` | Return a list of all vertices in the external boundary of ``vertices1``, intersected with ``vertices2``.
-    :meth:`~GenericGraph.set_vertices` | Associate arbitrary objects with each vertex
-    :meth:`~GenericGraph.set_vertex` | Associate an arbitrary object with a vertex.
-    :meth:`~GenericGraph.get_vertex` | Retrieve the object associated with a given vertex.
-    :meth:`~GenericGraph.get_vertices` | Return a dictionary of the objects associated to each vertex.
-    :meth:`~GenericGraph.vertex_iterator` | Return an iterator over the given vertices.
-    :meth:`~GenericGraph.neighbor_iterator` | Return an iterator over neighbors of ``vertex``.
-    :meth:`~GenericGraph.vertices` | Return a list of the vertices.
-    :meth:`~GenericGraph.neighbors` | Return a list of neighbors (in and out if directed) of ``vertex``.
-    :meth:`~GenericGraph.merge_vertices` | Merge vertices.
-    :meth:`~GenericGraph.add_edge` | Add an edge from ``u`` to ``v``.
-    :meth:`~GenericGraph.add_edges` | Add edges from an iterable container.
-    :meth:`~GenericGraph.subdivide_edge` | Subdivide an edge `k` times.
-    :meth:`~GenericGraph.subdivide_edges` | Subdivide `k` times edges from an iterable container.
-    :meth:`~GenericGraph.delete_edge` | Delete the edge from ``u`` to ``v``
-    :meth:`~GenericGraph.delete_edges` | Delete edges from an iterable container.
-    :meth:`~GenericGraph.contract_edge` | Contract an edge from ``u`` to ``v``.
-    :meth:`~GenericGraph.contract_edges` | Contract edges from an iterable container.
-    :meth:`~GenericGraph.delete_multiedge` | Delete all edges from ``u`` to ``v``.
-    :meth:`~GenericGraph.set_edge_label` | Set the edge label of a given edge.
-    :meth:`~GenericGraph.has_edge` | Check whether ``(u, v)`` is an edge of the (di)graph.
-    :meth:`~GenericGraph.edges` | Return a :class:`~EdgesView` of edges.
-    :meth:`~GenericGraph.edge_boundary` | Return a list of edges ``(u,v,l)`` with ``u`` in ``vertices1``
-    :meth:`~GenericGraph.edge_iterator` | Return an iterator over edges.
-    :meth:`~GenericGraph.edges_incident` | Return incident edges to some vertices.
-    :meth:`~GenericGraph.edge_label` | Return the label of an edge.
-    :meth:`~GenericGraph.edge_labels` | Return a list of the labels of all edges in ``self``.
-    :meth:`~GenericGraph.remove_multiple_edges` | Remove all multiple edges, retaining one edge for each.
-    :meth:`~GenericGraph.clear` | Empty the graph of vertices and edges and removes name, associated objects, and position information.
-    :meth:`~GenericGraph.degree` | Return the degree (in + out for digraphs) of a vertex or of vertices.
-    :meth:`~GenericGraph.average_degree` | Return the average degree of the graph.
-    :meth:`~GenericGraph.degree_histogram` | Return a list, whose `i`-th entry is the frequency of degree i.
-    :meth:`~GenericGraph.degree_iterator` | Return an iterator over the degrees of the (di)graph.
-    :meth:`~GenericGraph.degree_sequence` | Return the degree sequence of this (di)graph.
-    :meth:`~GenericGraph.random_subgraph` | Return a random subgraph containing each vertex with probability ``p``.
-    :meth:`~GenericGraph.add_clique` | Add a clique to the graph with the given vertices.
-    :meth:`~GenericGraph.add_cycle` | Add a cycle to the graph with the given vertices.
-    :meth:`~GenericGraph.add_path` | Add a path to the graph with the given vertices.
-    :meth:`~GenericGraph.complement` | Return the complement of the (di)graph.
-    :meth:`~GenericGraph.line_graph` | Return the line graph of the (di)graph.
-    :meth:`~GenericGraph.to_simple` | Return a simple version of itself (i.e., undirected and loops and multiple edges are removed).
-    :meth:`~GenericGraph.disjoint_union` | Return the disjoint union of ``self`` and ``other``.
-    :meth:`~GenericGraph.union` | Return the union of ``self`` and ``other``.
-    :meth:`~GenericGraph.relabel` | Relabel the vertices of ``self``
-    :meth:`~GenericGraph.degree_to_cell` | Return the number of edges from vertex to an edge in cell.
-    :meth:`~GenericGraph.subgraph` | Return the subgraph containing the given vertices and edges.
-    :meth:`~GenericGraph.is_subgraph` | Check whether ``self`` is a subgraph of ``other``.
+   :meth:`~GenericGraph.networkx_graph` | Return a new ``NetworkX`` graph from the Sage graph
+   :meth:`~GenericGraph.igraph_graph` | Return an ``igraph`` graph from the Sage graph
+   :meth:`~GenericGraph.to_dictionary` | Create a dictionary encoding the graph.
+   :meth:`~GenericGraph.copy` | Return a copy of the graph.
+   :meth:`~GenericGraph.export_to_file` | Export the graph to a file.
+   :meth:`~GenericGraph.adjacency_matrix` | Return the adjacency matrix of the (di)graph.
+   :meth:`~GenericGraph.incidence_matrix` | Return an incidence matrix of the (di)graph
+   :meth:`~GenericGraph.distance_matrix` | Return the distance matrix of the (strongly) connected (di)graph
+   :meth:`~GenericGraph.weighted_adjacency_matrix` | Return the weighted adjacency matrix of the graph
+   :meth:`~GenericGraph.kirchhoff_matrix` | Return the Kirchhoff matrix (a.k.a. the Laplacian) of the graph.
+   :meth:`~GenericGraph.has_loops` | Return whether there are loops in the (di)graph
+   :meth:`~GenericGraph.allows_loops` | Return whether loops are permitted in the (di)graph
+   :meth:`~GenericGraph.allow_loops` | Change whether loops are permitted in the (di)graph
+   :meth:`~GenericGraph.loops` | Return a list of all loops in the (di)graph
+   :meth:`~GenericGraph.loop_edges` | Return a list of all loops in the (di)graph
+   :meth:`~GenericGraph.number_of_loops` | Return the number of edges that are loops
+   :meth:`~GenericGraph.loop_vertices` | Return a list of vertices with loops
+   :meth:`~GenericGraph.remove_loops` | Remove loops on vertices in ``vertices``.
+   :meth:`~GenericGraph.has_multiple_edges` | Return whether there are multiple edges in the (di)graph.
+   :meth:`~GenericGraph.allows_multiple_edges` | Return whether multiple edges are permitted in the (di)graph.
+   :meth:`~GenericGraph.allow_multiple_edges` | Change whether multiple edges are permitted in the (di)graph.
+   :meth:`~GenericGraph.multiple_edges` | Return any multiple edges in the (di)graph.
+   :meth:`~GenericGraph.name` | Return or set the graph's name.
+   :meth:`~GenericGraph.is_immutable` | Return whether the graph is immutable.
+   :meth:`~GenericGraph.weighted` | Whether the (di)graph is to be considered as a weighted (di)graph.
+   :meth:`~GenericGraph.antisymmetric` | Test whether the graph is antisymmetric
+   :meth:`~GenericGraph.density` | Return the density
+   :meth:`~GenericGraph.order` | Return the number of vertices.
+   :meth:`~GenericGraph.size` | Return the number of edges.
+   :meth:`~GenericGraph.add_vertex` | Create an isolated vertex.
+   :meth:`~GenericGraph.add_vertices` | Add vertices to the (di)graph from an iterable container of vertices
+   :meth:`~GenericGraph.delete_vertex` | Delete vertex, removing all incident edges.
+   :meth:`~GenericGraph.delete_vertices` | Delete vertices from the (di)graph taken from an iterable container of vertices.
+   :meth:`~GenericGraph.has_vertex` | Check if ``vertex`` is one of the vertices of this graph.
+   :meth:`~GenericGraph.random_vertex` | Return a random vertex of ``self``.
+   :meth:`~GenericGraph.random_vertex_iterator` | Return an iterator over random vertices of ``self``.
+   :meth:`~GenericGraph.random_edge` | Return a random edge of ``self``.
+   :meth:`~GenericGraph.random_edge_iterator` | Return an iterator over random edges of ``self``.
+   :meth:`~GenericGraph.vertex_boundary` | Return a list of all vertices in the external boundary of ``vertices1``, intersected with ``vertices2``.
+   :meth:`~GenericGraph.set_vertices` | Associate arbitrary objects with each vertex
+   :meth:`~GenericGraph.set_vertex` | Associate an arbitrary object with a vertex.
+   :meth:`~GenericGraph.get_vertex` | Retrieve the object associated with a given vertex.
+   :meth:`~GenericGraph.get_vertices` | Return a dictionary of the objects associated to each vertex.
+   :meth:`~GenericGraph.vertex_iterator` | Return an iterator over the given vertices.
+   :meth:`~GenericGraph.neighbor_iterator` | Return an iterator over neighbors of ``vertex``.
+   :meth:`~GenericGraph.vertices` | Return a list of the vertices.
+   :meth:`~GenericGraph.neighbors` | Return a list of neighbors (in and out if directed) of ``vertex``.
+   :meth:`~GenericGraph.merge_vertices` | Merge vertices.
+   :meth:`~GenericGraph.add_edge` | Add an edge from ``u`` to ``v``.
+   :meth:`~GenericGraph.add_edges` | Add edges from an iterable container.
+   :meth:`~GenericGraph.subdivide_edge` | Subdivide an edge `k` times.
+   :meth:`~GenericGraph.subdivide_edges` | Subdivide `k` times edges from an iterable container.
+   :meth:`~GenericGraph.delete_edge` | Delete the edge from ``u`` to ``v``
+   :meth:`~GenericGraph.delete_edges` | Delete edges from an iterable container.
+   :meth:`~GenericGraph.contract_edge` | Contract an edge from ``u`` to ``v``.
+   :meth:`~GenericGraph.contract_edges` | Contract edges from an iterable container.
+   :meth:`~GenericGraph.delete_multiedge` | Delete all edges from ``u`` to ``v``.
+   :meth:`~GenericGraph.set_edge_label` | Set the edge label of a given edge.
+   :meth:`~GenericGraph.has_edge` | Check whether ``(u, v)`` is an edge of the (di)graph.
+   :meth:`~GenericGraph.edges` | Return a :class:`~EdgesView` of edges.
+   :meth:`~GenericGraph.edge_boundary` | Return a list of edges ``(u,v,l)`` with ``u`` in ``vertices1``
+   :meth:`~GenericGraph.edge_iterator` | Return an iterator over edges.
+   :meth:`~GenericGraph.edges_incident` | Return incident edges to some vertices.
+   :meth:`~GenericGraph.edge_label` | Return the label of an edge.
+   :meth:`~GenericGraph.edge_labels` | Return a list of the labels of all edges in ``self``.
+   :meth:`~GenericGraph.remove_multiple_edges` | Remove all multiple edges, retaining one edge for each.
+   :meth:`~GenericGraph.clear` | Empty the graph of vertices and edges and removes name, associated objects, and position information.
+   :meth:`~GenericGraph.degree` | Return the degree (in + out for digraphs) of a vertex or of vertices.
+   :meth:`~GenericGraph.average_degree` | Return the average degree of the graph.
+   :meth:`~GenericGraph.degree_histogram` | Return a list, whose `i`-th entry is the frequency of degree i.
+   :meth:`~GenericGraph.degree_iterator` | Return an iterator over the degrees of the (di)graph.
+   :meth:`~GenericGraph.degree_sequence` | Return the degree sequence of this (di)graph.
+   :meth:`~GenericGraph.random_subgraph` | Return a random subgraph containing each vertex with probability ``p``.
+   :meth:`~GenericGraph.add_clique` | Add a clique to the graph with the given vertices.
+   :meth:`~GenericGraph.add_cycle` | Add a cycle to the graph with the given vertices.
+   :meth:`~GenericGraph.add_path` | Add a path to the graph with the given vertices.
+   :meth:`~GenericGraph.complement` | Return the complement of the (di)graph.
+   :meth:`~GenericGraph.line_graph` | Return the line graph of the (di)graph.
+   :meth:`~GenericGraph.to_simple` | Return a simple version of itself (i.e., undirected and loops and multiple edges are removed).
+   :meth:`~GenericGraph.disjoint_union` | Return the disjoint union of ``self`` and ``other``.
+   :meth:`~GenericGraph.union` | Return the union of ``self`` and ``other``.
+   :meth:`~GenericGraph.relabel` | Relabel the vertices of ``self``
+   :meth:`~GenericGraph.degree_to_cell` | Return the number of edges from vertex to an edge in cell.
+   :meth:`~GenericGraph.subgraph` | Return the subgraph containing the given vertices and edges.
+   :meth:`~GenericGraph.is_subgraph` | Check whether ``self`` is a subgraph of ``other``.
 
 **Graph products:**
 
