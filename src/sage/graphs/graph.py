@@ -1,6 +1,6 @@
 # sage_setup: distribution = sagemath-graphs
 r"""
-Undirected graphs 
+Undirected graphs
 
 This module implements functions and operations involving undirected graphs.
 
